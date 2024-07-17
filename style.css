@@ -1,0 +1,162 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    margin: 20px 43%;
+    font-size: 74px;
+    font-weight: bold;
+    color: #5fa4e1;
+}
+
+.card img{
+    width: 350px;
+    object-fit: contain;
+    height: 300px;
+    border: 2px solid grey;
+    margin: 0 auto;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 20px 15px;
+    justify-content: center;
+}
+
+.col-4 {
+    margin: 20px 0;
+    padding: 20px 25px;
+    max-width: 33.33%;
+}
+
+.card-container {
+    perspective: 1000px;
+}
+
+.card {
+    height: 600px;
+    width: 400px;
+    margin: 20px auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border: 3px solid #020202;
+    box-shadow: 39px 20px 48px -9px rgba(0, 0, 0, 0.67);
+    border-radius: 16px;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 0.6s;
+}
+
+.card-body {
+    margin: 20px;
+    font-size: 20px;
+    line-height: 2;
+}
+
+.card-front, .card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 16px;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.card-back {
+    transform: rotateY(180deg);
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+
+.card-back img{
+    width: 350px;
+    object-fit: contain;
+    height: 300px;
+    border: 2px solid grey;
+    margin: 0 auto;
+
+}
+
+
+.card-back .img-weather{
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+    border: 2px solid #407cdf;
+    margin: 0 ;
+    border-radius: 8px;
+}
+
+
+
+.card-back .title-weather{
+    display: flex;
+    margin: 10px;
+}
+
+.card-back .card-title{
+    display: flex;
+   align-items: center;
+    margin-right:25px;
+    font-size: 24px;
+
+}
+
+
+.card-back p{
+    line-height: 40px;
+    font-size: 24px;
+    text-align: left;
+
+}
+
+.container {
+    margin: 40px 50px;
+    padding: 50px 0;
+    display: flex;
+    justify-content: end;
+}
+
+.search {
+    width: 30%;
+    padding: 10px 20px;
+    margin: 8px 0;
+    border: 2px solid #ccc;
+    border-radius: 14px;
+    font-size: 16px;
+    transition: border-color 0.3s;
+}
+
+.search:focus {
+    border-color: #4CAF50;
+    outline: none;
+}
+
+.search-btn {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 5px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 10px;
+    cursor: pointer;
+    border-radius: 14px;
+    transition: background-color 0.3s;
+}
+
+.search-btn:hover {
+    background-color: #28772c;
+}
+
+.card.flip {
+    transform: rotateY(180deg);
+}
